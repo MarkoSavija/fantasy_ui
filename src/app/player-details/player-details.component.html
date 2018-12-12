@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="modal-header">
+    <img [src]='player.imagePath' class="img-player-box">
+    <h4 class="modal-title">{{player.firstName}} {{player.lastName}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Team: <b>{{player.teamName}}</b></p>
+    <p>Position: <b>{{player.position}}</b></p>
+    <p>Value: <b>{{player.value}}</b></p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success">Add Player</button>
+  </div>
+</div>

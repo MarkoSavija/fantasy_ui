@@ -1,0 +1,37 @@
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <ul class="list-group list-group-flush col-">
+        <li class="list-group-item"
+            *ngFor="let player of allPlayers">
+            <img [src]='player.imagePath' class="img-circle">
+            {{ player.firstName }} {{ player.lastName }}  <b>Value: </b> {{ player.value}}
+            <a data-toggle="tooltip" title="Player Details" class="btn btn-circle-info btn-primary" (click)="showPlayerDetails(player)"><b style="color:white">i</b></a>
+            <a data-toggle="tooltip" title="Add Player" class="btn btn-circle-add btn-success"><b style="color:white">+</b></a>
+        </li>
+        </ul>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="row justify-content-center">
+            <h4>My Team Name<br></h4>
+        </div>
+        <table border="1">
+            <tr>
+                <th width="10%">Position</th>
+                <th>Name</th>
+                <th width=10%>Value</th>
+            </tr>
+            <tr *ngFor="let player of allPlayers">
+                <td>{{player.position}}</td>
+                <td>{{player.firstName}} {{player.lastName}}</td>
+                <td align="center">{{player.value}}</td>
+                <td width="5%"><a data-toggle="tooltip" title="Remove Player" class="btn btn-circle-add btn-danger"><b style="color:white">-</b></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
