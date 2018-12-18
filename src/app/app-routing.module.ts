@@ -9,7 +9,7 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'signup', pathMatch: 'full'},
+    { path: '', redirectTo: 'signin', pathMatch: 'full'},
     { path: 'signup', component: SignupComponent},
     { path: 'signin', component: SigninComponent},
     { path: 'my-team', component: MyTeamComponent},

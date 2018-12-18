@@ -6,9 +6,9 @@ import { Component, NgModule, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'FantasyFootball';
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
-  title = 'FantasyFootball';
 }

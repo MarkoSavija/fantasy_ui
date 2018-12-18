@@ -14,10 +14,10 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSignup(form: NgForm){
+  onSignup(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
-    //odradim ovde login, autorizaciju, autentifikaciju...
+    // odradim ovde login, autorizaciju, autentifikaciju...
 
     this.router.navigate(['/my-team']);
   }
